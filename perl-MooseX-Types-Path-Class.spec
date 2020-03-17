@@ -4,12 +4,13 @@
 #
 Name     : perl-MooseX-Types-Path-Class
 Version  : 0.09
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Types-Path-Class-0.09.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Types-Path-Class-0.09.tar.gz
 Summary  : 'A Path::Class type library for Moose'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+Requires: perl-MooseX-Types-Path-Class-license = %{version}-%{release}
 Requires: perl-MooseX-Types-Path-Class-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(B::Hooks::EndOfScope)
@@ -56,6 +57,14 @@ Requires: perl-MooseX-Types-Path-Class = %{version}-%{release}
 dev components for the perl-MooseX-Types-Path-Class package.
 
 
+%package license
+Summary: license components for the perl-MooseX-Types-Path-Class package.
+Group: Default
+
+%description license
+license components for the perl-MooseX-Types-Path-Class package.
+
+
 %package perl
 Summary: perl components for the perl-MooseX-Types-Path-Class package.
 Group: Default
@@ -84,6 +93,8 @@ fi
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-MooseX-Types-Path-Class
+cp %{_builddir}/MooseX-Types-Path-Class-0.09/LICENSE %{buildroot}/usr/share/package-licenses/perl-MooseX-Types-Path-Class/f6392b1d37850a83994dc6347e3d15a6ff475a1c
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -101,6 +112,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %defattr(-,root,root,-)
 /usr/share/man/man3/MooseX::Types::Path::Class.3
 
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-MooseX-Types-Path-Class/f6392b1d37850a83994dc6347e3d15a6ff475a1c
+
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/MooseX/Types/Path/Class.pm
+/usr/lib/perl5/vendor_perl/5.30.2/MooseX/Types/Path/Class.pm
