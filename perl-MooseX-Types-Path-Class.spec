@@ -4,7 +4,7 @@
 #
 Name     : perl-MooseX-Types-Path-Class
 Version  : 0.09
-Release  : 4
+Release  : 5
 URL      : https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Types-Path-Class-0.09.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Types-Path-Class-0.09.tar.gz
 Summary  : 'A Path::Class type library for Moose'
@@ -118,4 +118,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/MooseX/Types/Path/Class.pm
+/usr/lib/perl5/vendor_perl/5.32.1/MooseX/Types/Path/Class.pm
