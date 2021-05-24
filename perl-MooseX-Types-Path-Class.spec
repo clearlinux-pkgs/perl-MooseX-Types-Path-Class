@@ -4,7 +4,7 @@
 #
 Name     : perl-MooseX-Types-Path-Class
 Version  : 0.09
-Release  : 6
+Release  : 7
 URL      : https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Types-Path-Class-0.09.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Types-Path-Class-0.09.tar.gz
 Summary  : 'A Path::Class type library for Moose'
